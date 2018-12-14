@@ -20,9 +20,9 @@ function askQuestion(compareStrings) {
 
 function compareStrings(input1, input2) {
   const diff = input1.length - input2.length;
-  var steps = 0;
+  let steps = 0;
   if (diff === 0) {
-    for (var i = 0; i < input1.length && steps < 2; i++) {
+    for (let i = 0; i < input1.length && steps < 2; i++) {
       if (input1.charAt(i) != input2.charAt(i)) {
         steps++;
       }
@@ -31,7 +31,7 @@ function compareStrings(input1, input2) {
 
   if (diff === 1 || diff === -1) {
     for (
-      var i = 0, j = 0;
+      let i = 0, j = 0;
       i < input1.length && j < input2.length && steps < 2;
       i++, j++
     ) {

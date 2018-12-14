@@ -4,7 +4,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-var inputString = "this is not empty";
+let inputString = "this is not empty";
 
 function askQuestion(compressString) {
   rl.question("Give me a string", input => {
@@ -18,9 +18,9 @@ function askQuestion(compressString) {
 
 //returns the first white space value
 function compressString() {
-  var string = inputString.trim().split(/\s+/);
+  let string = inputString.trim().split(/\s+/);
   inputString = string[0];
-  for (var i = 1; i < string.length; i++) {
+  for (let i = 1; i < string.length; i++) {
     inputString = inputString.concat("%20", string[i]);
   }
   console.log(inputString);
