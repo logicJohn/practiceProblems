@@ -21,7 +21,6 @@ function compressString() {
   var string = inputString.trim().split(/\s+/);
   inputString = string[0];
   for (var i = 1; i < string.length; i++) {
-    console.log(`${inputString} and ${string[i]}`);
     inputString = inputString.concat("%20", string[i]);
   }
   console.log(inputString);
