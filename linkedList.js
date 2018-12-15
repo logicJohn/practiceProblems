@@ -18,8 +18,8 @@ class Node {
 class LinkedList {
   constructor() {
     this.head = null;
+    this.size = 0;
     this.count();
-    this.num = counter;
   }
 
   count() {
@@ -95,3 +95,35 @@ a.printList();
 console.log(`number of nodes ${nodeCounter}`);
 LinkedList.printCount();
 console.log("-------------");
+
+function deleteNext(head) {
+  console.log("begining delete");
+  if (head === null) {
+    return null;
+  }
+  if (head.next === null) {
+    let temp = head;
+    head = null;
+
+    console.log(head);
+    console.log(temp);
+    return temp;
+  } else {
+    let temp = head;
+    head = head.next;
+
+    console.log(temp);
+    console.log(head);
+
+    return temp;
+  }
+}
+
+//searches linked list and removes all 2's
+function testDelete(a) {
+  let tempHead = a;
+  let search = tempHead.head;
+}
+
+testDelete(a);
+a.printList();
